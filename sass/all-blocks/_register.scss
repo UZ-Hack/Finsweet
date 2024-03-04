@@ -1,0 +1,41 @@
+.register {
+    height: 130vh;
+    padding-top: 69px;
+
+    &__title {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 64px;
+        font-family: $font-primary;
+        color: $black;
+        text-align: center;
+        padding-bottom: 68px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        max-width: 768px;
+        gap: 90px;
+        margin: 0 auto;
+    }
+
+    &__inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+
+        input {
+            width: 100%;
+        }
+    }
+}
+
+.btn--register {
+    background-color: $yellow;
+    border-color: $yellow;
+
+    &:hover {
+        background-color: transparent;
+    }
+}

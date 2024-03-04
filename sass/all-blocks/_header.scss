@@ -1,0 +1,228 @@
+nav {
+    padding: 15px 0;
+    background-color: $black;
+    width: 100%;
+}
+
+.btn--login {
+    background-color: $white;
+    border-color: $white;
+}
+
+.btn--login:hover {
+    color: $white;
+}
+
+.fa-bars {
+    color: $white;
+    display: none;
+
+    @include for-nav-mobile {
+        display: block;
+        font-size: 20px;
+    }
+}
+
+.fa-xmark {
+    color: $white;
+    display: none;
+
+    @include for-nav-mobile {
+        position: absolute;
+        display: block;
+        top: 21px;
+        right: 20px;
+        font-size: 20px;
+    }
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav {
+        display: flex;
+        gap: 83px;
+        align-items: center;
+        transition: 0.2s ease;
+
+        @include for-nav-mobile {
+            position: absolute;
+            flex-direction: column;
+            background-color: #181927;
+            right: 0;
+            height: 100vh;
+            padding: 100px 0;
+            width: 70%;
+            top: 0;
+            transform: translateX(100%);
+            z-index: 100;
+        }
+
+        &.open {
+            transform: translateX(0);
+        }
+    }
+
+    &__list {
+        display: flex;
+        gap: 25px;
+
+        @include for-nav-mobile {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        &-link {
+            color: $white;
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+}
+
+.hero {
+    background-image: url("../images/hero-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 150px 0;
+
+    @include for-nav-mobile {
+        padding: 50px 0;
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+
+        @include for-nav-mobile {
+            text-align: center;
+        }
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            color: $white;
+
+            &-span {
+                font-weight: 500;
+                text-transform: uppercase;
+
+                span {
+                    font-weight: 900;
+                }
+            }
+
+            &-title {
+                font-family: $font-primary;
+                font-size: 56px;
+                max-width: 850px;
+            }
+
+            &-date {
+                .text-primary {
+                    color: $yellow;
+                }
+            }
+
+            &-description {
+                max-width: 599px;
+            }
+        }
+    }
+}
+
+.btn {
+    &--hero {
+        background-color: $yellow;
+        border-color: $yellow;
+
+        &:hover {
+            color: $yellow;
+        }
+    }
+}
+
+.startup-hero {
+    background-color: $lavender;
+    padding: 80px 0;
+    text-align: center;
+
+    &__title {
+        font-family: $font-primary;
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 64px;
+        color: $black;
+        padding-bottom: 16px;
+    }
+
+    &__description {
+        font-size: 16px;
+        line-height: 28px;
+        color: $medium-grey;
+        max-width: 515px;
+        margin: 0 auto;
+        padding-bottom: 38px;
+    }
+
+    &__span {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 3px;
+    }
+}
+
+.all-posts-hero {
+    background-color: $lavender;
+    padding: 80px 0;
+
+    &-flex {
+        display: flex;
+        justify-content: space-between;
+        gap: 100px;
+
+        @include for-all-posts {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        &-left {
+            &-span {
+                text-transform: uppercase;
+                font-weight: 500;
+                line-height: 20px;
+                color: $black;
+                letter-spacing: 3px;
+            }
+
+            &-title {
+                font-weight: 700;
+                font-size: 36px;
+                line-height: 48px;
+                font-family: $font-primary;
+                color: $black;
+                padding-top: 10px;
+                padding-bottom: 14px;
+            }
+
+            &-description {
+                line-height: 28px;
+                color: $medium-grey;
+                padding-top: 27px;
+            }
+        }
+
+        &-right {
+            img {
+                max-width: 515px;
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+@mixin for-nav-mobile {
+    @media screen and (max-width: 726px) {
+        @content;
+    }
+}
+
+@mixin for-popular-blogs {
+    @media screen and (max-width: 1232px) {
+        @content;
+    }
+}
+
+@mixin for-popular-blogs-tablet {
+    @media screen and (max-width: 1110px) {
+        @content;
+    }
+}
+
+@mixin for-catagory-tablet {
+    @media screen and (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin for-footer {
+    @media screen and (max-width: 506px) {
+        @content;
+    }
+}
+
+@mixin for-all-posts {
+    @media screen and (max-width: 983px) {
+        @content;
+    }
+}
+
+@mixin for-blogs {
+    @media screen and (max-width: 822px) {
+        @content;
+    }
+}
+

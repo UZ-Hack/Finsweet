@@ -1,0 +1,32 @@
+footer {
+    padding: 54px 0;
+    background-color: $black;
+    color: $white;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include for-footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        opacity: 0.7;
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    &__right {
+        display: flex;
+        gap: 26px;
+        color: $medium-grey;
+    }
+}

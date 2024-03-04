@@ -1,0 +1,54 @@
+.catagory {
+    padding: 70px 0;
+
+    &__title {
+        color: $black;
+        font-family: $font-primary;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 48px;
+        text-align: center;
+        padding-bottom: 71px;
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        gap: 32px;
+
+        @include for-catagory-tablet {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    &__card {
+        padding: 31px 32px;
+        border: 1px solid #6d6e764d;
+
+        &:nth-child(2) {
+            background-color: $yellow;
+            border: none;
+        }
+
+        &-icon {
+            padding-bottom: 15px;
+        }
+
+        &-title {
+            font-family: $font-primary;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 40px;
+            color: $black;
+            padding-bottom: 4px;
+        }
+
+        &-description {
+            color: $medium-grey;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;
+        }
+    }
+}
